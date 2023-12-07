@@ -19,7 +19,7 @@ class SiswaRequest extends FormRequest
         return [
             'nama_awal' => 'required|max:30|regex:/^[\pL\pM ]+$/u',
             'nama_akhir' => 'required|max:30|regex:/^[\pL\pM ]+$/u',
-            'email' => 'required|email:dns|unique:siswa',
+            'email' => 'required|email:dns|unique:siswa|unique:users',
             'password' => 'required|min:8',
             'status' => 'required|in:0,1',
         ];
